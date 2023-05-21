@@ -1,0 +1,153 @@
+$font-f-primary: "Monument Extended", sans-serif;
+$font-f-secondary: "Inter", sans-serif;
+$font-f-hero: "Monument Extended Ultrabold", sans-serif;
+
+$font-w-400: 400;
+$font-w-700: 700;
+$font-w-900: 900;
+
+$c-primary: #000;
+$c-secondary: #fff;
+$c-var: #3d3d3d;
+$c-detail: #8c52ff;
+$c-link-primary: #3d3d3d;
+$c-link-hover: #000;
+
+$back-c-primary: #fff;
+$back-detail: radial-gradient(
+  circle at 12.8% 28%,
+  rgb(206, 155, 243) 0%,
+  #8c52ff 90%
+);
+
+$back-c-button-primary: #3d3d3d;
+$back-c-button-secondary: #fff;
+$back-c-button-hover: #000;
+$back-c-button-checkout: #48e471;
+$back-c-button-checkout-hover: #74eb93;
+$back-c-var-hover: hsla(0, 0%, 5%, 0.2);
+
+$border-c-button-checkout: #48e471;
+$border-c-button-checkout-hover: #74eb93;
+$border-c-var: hsla(0, 0%, 5%, 0.2);
+
+$border-modal: 1px solid $border-c-var;
+
+$ls-primary: 0.05rem;
+$ls-secondary: -0.05rem;
+$ls-link: 0.1rem;
+$ls-button: 0.12rem;
+
+$z-nav: 5;
+$z-backdrop: 20;
+$z-modal: 25;
+$z-modal-n: 30;
+
+.list_wrapper {
+  // TODO: chequear este padding
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #414246;
+
+  @media (min-width: 1200px) {
+    padding-top: 4rem;
+  }
+
+  .item_container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+
+    .image_wrapper {
+      position: relative;
+
+      .image {
+        max-height: 12rem;
+        border-radius: 1rem;
+        overflow-x: hidden;
+        align-self: center;
+      }
+
+      .amount {
+        position: absolute;
+        top: -0.8rem;
+        right: -0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 2.2rem;
+        height: 2.2rem;
+        text-align: center;
+        font-size: 1.3rem;
+        font-family: $font-f-secondary;
+        letter-spacing: $ls-secondary;
+        font-weight: $font-w-700;
+        color: $c-secondary;
+        background-color: rgba(107, 107, 107, 0.8);
+      }
+    }
+
+    .price,
+    .name {
+      font-weight: $font-w-700;
+      text-transform: capitalize;
+    }
+
+    .name,
+    .size,
+    .price {
+      font-family: $font-f-secondary;
+      letter-spacing: $ls-secondary;
+      color: $c-secondary;
+    }
+  }
+}
+
+.subtotal_wrapper {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-bottom: 1px solid #414246;
+
+  div {
+    display: flex;
+    p {
+      color: $c-secondary;
+      font-family: $font-f-secondary;
+      letter-spacing: $ls-secondary;
+    }
+  }
+
+}
+
+.total_wrapper {
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+
+  p {
+    color: $c-secondary;
+    font-weight: $font-w-700;
+    font-family: $font-f-secondary;
+      letter-spacing: $ls-secondary;
+  }
+
+  .total_price {
+    font-size: 2.6rem;
+  }
+}
+
+.subtotal_price,
+.total_price {
+  margin-left: auto;
+  font-weight: $font-w-700
+}
+
+
